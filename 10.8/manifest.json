@@ -1,0 +1,21 @@
+[
+    {
+        "guid": "c83d86bb-a1e0-4c35-a113-e2101cf4ee6b",
+        "name": "Intro Skipper",
+        "overview": "Automatically detect and skip intros in television episodes",
+        "description": "Analyzes the audio of television episodes and detects introduction sequences.",
+        "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
+        "category": "General",
+        "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/intro-skipper/logo.png",
+        "versions": [
+            {
+                "version": "0.10.8.1",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/jumoog/intro-skipper/blob/master/CHANGELOG.md)\n",
+                "targetAbi": "10.8.4.0",
+                "sourceUrl": "https://github.com/intro-skipper/intro-skipper/releases/download/10.8/v0.10.8.1/intro-skipper-v0.10.8.1.zip",
+                "checksum": "76cdb2bad9582d23c1f6f4d868218d6c",
+                "timestamp": "2024-10-26T18:10:00Z"
+            }
+        ]
+    }
+]
