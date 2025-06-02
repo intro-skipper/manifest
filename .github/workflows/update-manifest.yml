@@ -1,0 +1,44 @@
+name: Update Manifest on Dispatch
+
+on:
+  repository_dispatch:
+    types: [update-manifest-node] # Or your chosen event type
+
+jobs:
+  update_manifest_file:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Update manifest.json using Node.js script
+        id: update_script # Give this step an id to access its outputs
+        run: |
+          node .github/scripts/update-manifest.js
+        env:
+          CLIENT_PAYLOAD_JSON: ${{ toJSON(github.event.client_payload) }}
+          
+      - name: Commit changes
+        if: success()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add *
+          if git diff --staged --quiet; then
+            echo "No changes staged for commit. Working tree clean or no changes to specified file."
+          else
+            echo "Changes are staged. Proceeding with commit."
+            git commit -m "new ${{ github.event.client_payload.pluginName }} release v${{ github.event.client_payload.version }}"
+            echo "Pushing changes..."
+            git push
+          fi
