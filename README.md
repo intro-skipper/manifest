@@ -4,7 +4,7 @@
 https://manifest.intro-skipper.org/manifest.json
 ```
 
-# Isues
+# Issues
 
 If you are having issues, check this out:
 
