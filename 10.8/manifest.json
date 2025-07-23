@@ -2,11 +2,11 @@
     {
         "guid": "c83d86bb-a1e0-4c35-a113-e2101cf4ee6b",
         "name": "Intro Skipper",
-        "overview": "Automatically detect and skip intros in television episodes",
-        "description": "Analyzes the audio of television episodes and detects introduction sequences.",
+        "overview": "EOL! Update your Jellyfin Server 10.10",
+        "description": "EOL! Update your Jellyfin Server to 10.10",
         "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
         "category": "General",
-        "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/intro-skipper/logo.png",
+        "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/intro-skipper/logo_eol.png",
         "versions": [
             {
                 "version": "0.10.8.1",
