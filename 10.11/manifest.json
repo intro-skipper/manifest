@@ -60,6 +60,15 @@
         "owner": "Intro Skipper",
         "category": "MoviesAndShows",
         "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/jellyfin-plugin-ms-chapter/logo.png",
-        "versions": []
+        "versions": [
+            {
+                "version": "0.5.0.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/jellyfin-plugin-ms-chapter/blob/master/CHANGELOG.md)",
+                "targetAbi": "10.11.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/jellyfin-plugin-ms-chapter/releases/download/0.5.0-33f16aa/ChapterCreator-0.5.0.zip",
+                "checksum": "ac861165af2a9bdc92109a6d73e34125",
+                "timestamp": "2025-10-21T15:32:37Z"
+            }
+        ]
     }
 ]
