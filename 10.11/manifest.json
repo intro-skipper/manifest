@@ -50,7 +50,16 @@
         "owner": "Intro Skipper (forked from Endrl)",
         "category": "MoviesAndShows",
         "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/jellyfin-plugin-edl/logo.png",
-        "versions": []
+        "versions": [
+            {
+                "version": "0.5.0.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/jellyfin-plugin-edl/blob/10.10.2/CHANGELOG.md)",
+                "targetAbi": "10.11.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/jellyfin-plugin-edl/releases/download/0.5.0-c0fdd22/Jellyfin.Plugin.Edl-0.5.0.zip",
+                "checksum": "de00b28cbfe51e1d6665083b3e76d6ec",
+                "timestamp": "2025-10-21T21:05:45Z"
+            }
+        ]
     },
     {
         "guid": "e22fb8f5-bc98-4f76-9be4-87de302a97ea",
