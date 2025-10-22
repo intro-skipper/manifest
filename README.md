@@ -9,7 +9,7 @@ https://intro-skipper.org/manifest.json
 If you are having issues, check this out:
 
 ```bash
-curl -A "Jellyfin-Server/10.10.7" https://intro-skipper.org/manifest.json -L -v
+curl -A "Jellyfin-Server/10.11.0" https://intro-skipper.org/manifest.json -L -v
 ```
 
 This should resolve to:
