@@ -6,7 +6,7 @@
         "description": "Analyzes the audio of television episodes and detects introduction sequences.",
         "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
         "category": "Intro-Skipper",
-        "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/intro-skipper/logo.png",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@main/images/intro-skipper/logo.png",
         "versions": [
             {
                 "version": "1.10.10.25",
@@ -41,7 +41,7 @@
         "description": "These files can be used by Kodi and other players to skip content like commercials and are stored next to your media. Therefore you need write access.",
         "owner": "Intro Skipper (forked from Endrl)",
         "category": "Intro-Skipper",
-        "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/jellyfin-plugin-edl/logo.png",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@main/images/jellyfin-plugin-edl/logo.png",
         "versions": [
             {
                 "version": "0.4.2.0",
@@ -60,7 +60,7 @@
         "description": "Provides an extended HTTP API to create and delete MediaSegments. This plugin is only necessary if you are using the Jellyfin Segment Editor: https://github.com/intro-skipper/segment-editor",
         "owner": "Intro Skipper (forked from Endrl)",
         "category": "Intro-Skipper",
-        "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/jellyfin-plugin-ms-api/logo.png",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@main/images/jellyfin-plugin-ms-api/logo.png",
         "versions": [
             {
                 "version": "1.0.2",
@@ -79,7 +79,7 @@
         "description": "This plugin converts existing media segments (like Intros and Outros) into standardized Matroska chapter XML files",
         "owner": "Intro Skipper",
         "category": "Intro-Skipper",
-        "imageUrl": "https://raw.githubusercontent.com/intro-skipper/manifest/main/images/jellyfin-plugin-ms-chapter/logo.png",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@main/images/jellyfin-plugin-ms-chapter/logo.png",
         "versions": [
             {
                 "version": "0.4.2.0",
