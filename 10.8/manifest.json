@@ -6,7 +6,7 @@
         "description": "EOL! Update your Jellyfin Server to 10.10",
         "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
         "category": "General",
-        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@main/images/intro-skipper/logo_eol.png",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/intro-skipper/logo_eol.png",
         "versions": [
             {
                 "version": "0.10.8.1",
