@@ -7,15 +7,6 @@
         "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
         "category": "General",
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/intro-skipper/logo_eol.png",
-        "versions": [
-            {
-                "version": "0.10.8.1",
-                "changelog": "- See the full changelog at [GitHub](https://github.com/jumoog/intro-skipper/blob/master/CHANGELOG.md)\n",
-                "targetAbi": "10.8.4.0",
-                "sourceUrl": "https://github.com/intro-skipper/intro-skipper/releases/download/10.8/v0.10.8.1/intro-skipper-v0.10.8.1.zip",
-                "checksum": "76cdb2bad9582d23c1f6f4d868218d6c",
-                "timestamp": "2024-10-26T18:10:00Z"
-            }
-        ]
+        "versions": []
     }
 ]
