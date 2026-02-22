@@ -35,7 +35,7 @@
         ]
     },
     {
-        "guid": "6B0E323A-4AEE-4B10-813F-1E060488AE90",
+        "guid": "ace21d44-a4e5-4a85-ae75-acd2e24a9574",
         "name": "Segment Editor",
         "overview": "Segment editing UI embedded as a plugin page",
         "description": "Packages the Segment Editor web app (built from intro-skipper/segment-editor) as a Jellyfin server plugin",
