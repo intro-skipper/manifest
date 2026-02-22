@@ -41,15 +41,15 @@
         "description": "Packages the Segment Editor web app (built from intro-skipper/segment-editor) as a Jellyfin server plugin",
         "owner": "Intro Skipper",
         "category": "MoviesAndShows",
-        "imageUrl": "https://github.com/intro-skipper/segment-editor-plugin/blob/master/images/logo.png?raw=true",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/segment-editor-plugin@master/images/logo.png",
         "versions": [
             {
-                "version": "0.1.3.0",
+                "version": "0.1.4.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
-                "targetAbi": "10.11.0.0",
-                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v0.1.3.0/segment-editor-plugin-v0.1.3.0.zip",
-                "checksum": "286be864e9f518016575390d35d0ca73",
-                "timestamp": "2026-02-21T06:05:45Z"
+                "targetAbi": "10.11.5.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v0.1.4.0/segment-editor-plugin-v0.1.4.0.zip",
+                "checksum": "4bcf70b69603dc0d527c66d125fe692f",
+                "timestamp": "2026-02-22T11:25:45Z"
             }
         ]
     },
