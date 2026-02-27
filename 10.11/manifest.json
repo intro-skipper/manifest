@@ -44,12 +44,12 @@
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/segment-editor-plugin@master/images/logo.png",
         "versions": [
             {
-                "version": "0.1.4.0",
+                "version": "0.1.8.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
                 "targetAbi": "10.11.5.0",
-                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v0.1.4.0/segment-editor-plugin-v0.1.4.0.zip",
-                "checksum": "4bcf70b69603dc0d527c66d125fe692f",
-                "timestamp": "2026-02-22T11:25:45Z"
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v0.1.8.0/segment-editor-plugin-v0.1.8.0.zip",
+                "checksum": "8085a23807fd035652cacce806878d66",
+                "timestamp": "2026-02-27T07:58:04Z"
             }
         ]
     },
