@@ -58,6 +58,14 @@
                 "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v0.1.10.0/segment-editor-plugin-v0.1.10.0.zip",
                 "checksum": "bc8e8ec495b3550935a7e4578d2feef9",
                 "timestamp": "2026-02-28T16:16:22Z"
+            },
+            {
+                "version": "0.1.25.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "10.11.6.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v0.1.25.0/segment-editor-plugin-v0.1.25.0.zip",
+                "checksum": "cf2ba5934128c20194ddd1d0b80d31c0",
+                "timestamp": "2026-03-20T16:16:22Z"
             }
         ]
     },
