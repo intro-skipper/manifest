@@ -89,7 +89,16 @@ function downloadBuffer(url) {
       }
       const chunks = [];
       res.on("data", (chunk) => chunks.push(chunk));
-      res.on("end", () => resolve(Buffer.concat(chunks)));
+      res.on("end", () => {
+        const buffer = Buffer.concat(chunks);
+        if (res.statusCode < 200 || res.statusCode >= 300) {
+          const err = new Error(`Request to ${url} failed with status code ${res.statusCode}`);
+          err.statusCode = res.statusCode;
+          err.body = buffer;
+          return reject(err);
+        }
+        resolve(buffer);
+      });
       res.on("error", reject);
     }).on("error", reject);
   });
@@ -192,8 +201,20 @@ async function main() {
     timestamp: publishedAt,
   };
 
-  // 7. Add to front, keep only MAX_VERSIONS entries
+  // 7. Add new entry, then sort by recency and keep only MAX_VERSIONS entries
   existingVersions.unshift(newEntry);
+  existingVersions.sort((a, b) => {
+    if (a.timestamp && b.timestamp) {
+      const aTime = new Date(a.timestamp).getTime();
+      const bTime = new Date(b.timestamp).getTime();
+      return bTime - aTime; // newest first
+    }
+    if (a.version && b.version) {
+      // Fallback: compare versions (descending, numeric-aware)
+      return b.version.localeCompare(a.version, undefined, { numeric: true, sensitivity: "base" });
+    }
+    return 0;
+  });
   plugin.versions = existingVersions.slice(0, MAX_VERSIONS);
 
   // 8. Write updated manifest
