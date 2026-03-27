@@ -28,8 +28,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Commit and push
+      - name: Validate JSON files
         if: steps.update.outputs.updated == 'true'
+        run: python .github/scripts/validate-json.py
+
+      - name: Commit and push
+        if: success() && steps.update.outputs.updated == 'true'
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"

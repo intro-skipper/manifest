@@ -29,6 +29,9 @@ jobs:
         env:
           CLIENT_PAYLOAD_JSON: ${{ toJSON(github.event.client_payload) }}
           
+      - name: Validate JSON files
+        run: python .github/scripts/validate-json.py
+
       - name: Create Pull Request
         if: success()
         env:

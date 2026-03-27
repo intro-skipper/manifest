@@ -12,33 +12,4 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Validate JSON files
-        run: |
-          python - <<'PY'
-          import json
-          import pathlib
-          import sys
-
-          root = pathlib.Path('.')
-          files = sorted(root.rglob('*.json'))
-
-          if not files:
-              print('No JSON files found.')
-              sys.exit(0)
-
-          errors = []
-          for file in files:
-              try:
-                  with file.open('r', encoding='utf-8') as f:
-                      json.load(f)
-                  print(f'OK: {file}')
-              except Exception as e:
-                  errors.append((file, e))
-
-          if errors:
-              print('\nInvalid JSON detected:')
-              for file, err in errors:
-                  print(f'- {file}: {err}')
-              sys.exit(1)
-
-          print(f'\nValidated {len(files)} JSON file(s).')
-          PY
+        run: python .github/scripts/validate-json.py
