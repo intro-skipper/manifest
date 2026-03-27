@@ -169,7 +169,14 @@ async function main() {
   }
 
   const plugin = manifest[pluginIndex];
-  const existingVersions = plugin.versions || [];
+  if (!Array.isArray(plugin.versions)) {
+    console.error(
+      `Plugin with GUID ${PLUGIN_GUID} has no valid 'versions' array in ${manifestPath}. Aborting.`,
+    );
+    process.exit(1);
+  }
+
+  const existingVersions = plugin.versions;
   const alreadyExists = existingVersions.some((v) => v.version === version);
 
   if (alreadyExists) {
@@ -216,6 +223,13 @@ async function main() {
     return 0;
   });
   plugin.versions = existingVersions.slice(0, MAX_VERSIONS);
+
+  if (!Array.isArray(plugin.versions) || plugin.versions.length === 0) {
+    console.error(
+      `Post-update versions list is empty for plugin GUID ${PLUGIN_GUID} in ${manifestPath}. Aborting.`,
+    );
+    process.exit(1);
+  }
 
   // 8. Write updated manifest
   fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 4) + "\n");
