@@ -146,7 +146,7 @@
         "description": "Sync segments from a database of timestamps curated and reviewed by the Intro Skipper community.",
         "owner": "Intro Skipper",
         "category": "MoviesAndShows",
-        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/skipme.db-plugin/logo.png",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/skipme.db-plugin@master/images/logo.png",
         "versions": [
             {
                 "version": "0.1.3.0",
