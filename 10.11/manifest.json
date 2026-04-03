@@ -140,7 +140,7 @@
         ]
     },
     {
-        "guid": "6B0E323A-4AEE-4B10-813F-1E060488AE90",
+        "guid": "2a63e62-0ac5-4575-9ad2-2c7534ccb83d",
         "name": "SkipMe.db",
         "overview": "Sync segments from a community database",
         "description": "Sync segments from a database of timestamps curated and reviewed by the Intro Skipper community.",
