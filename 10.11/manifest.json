@@ -142,8 +142,8 @@
     {
         "guid": "b2a63e62-0ac5-4575-9ad2-2c7534ccb83d",
         "name": "SkipMe.db",
-        "overview": "Sync segments from a community database",
-        "description": "Sync segments from a database of timestamps curated and reviewed by the Intro Skipper community.",
+        "overview": "Retrieves crowd-sourced segment timestamps from the SkipMe.db API",
+        "description": "Retrieves a database of crowd-sourced timestamps from the SkipMe.db API and supplies them to Jellyfin as a segment provider",
         "owner": "Intro Skipper",
         "category": "MoviesAndShows",
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/skipme.db-plugin@master/images/logo.png",
