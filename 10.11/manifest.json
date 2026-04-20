@@ -149,11 +149,11 @@
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/skipme.db-plugin@master/images/logo.png",
         "versions": [
             {
-                "version": "0.1.9.0",
+                "version": "0.1.10.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
                 "targetAbi": "10.11.0.0",
-                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download//v0.1.9.0/SkipMe.db-plugin-v0.1.9.0.zip",
-                "checksum": "dda83ce9d644237896872af054d2deb8",
+                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download//v0.1.10.0/SkipMe.db-plugin-v0.1.10.0.zip",
+                "checksum": "78fd874b93a7e90c545f2d709f853357",
                 "timestamp": "2026-04-13T12:00:00Z"
             }
         ]
