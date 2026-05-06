@@ -1,4 +1,4 @@
-name: Check Segment Editor Plugin
+name: Check and Update Plugins
 
 on:
   schedule:
@@ -22,9 +22,9 @@ jobs:
         with:
           node-version: "lts/*"
 
-      - name: Check for new version and update manifest
+      - name: Check for new versions and update manifests
         id: update
-        run: node .github/scripts/check-segment-editor.js
+        run: node .github/scripts/check-plugins.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -38,7 +38,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          VERSION="${{ steps.update.outputs.version }}"
+          SUMMARY="${{ steps.update.outputs.summary }}"
           git add .
 
           if git diff --staged --quiet; then
@@ -46,5 +46,5 @@ jobs:
             exit 0
           fi
 
-          git commit -m "Update Segment Editor to v${VERSION}"
+          git commit -m "chore: update ${SUMMARY}"
           git push
