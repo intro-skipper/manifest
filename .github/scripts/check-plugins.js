@@ -220,7 +220,15 @@ async function processPlugin(plugin, manifestCache, modifiedManifests) {
     }
 
     const tag = release.tag_name;
-    const version = tag.startsWith("v") ? tag.slice(1) : tag;
+    let version = tag.startsWith("v") ? tag.slice(1) : tag;
+    // Normalize versions with a hyphenated hash suffix (e.g. "0.4.2-68bd752" → "0.4.2.0")
+    const hyphenIdx = version.indexOf("-");
+    if (hyphenIdx !== -1) {
+      version = version.substring(0, hyphenIdx);
+      if (version.split(".").length < 4) {
+        version += ".0";
+      }
+    }
 
     if (existingVersionsSet.has(version)) {
       console.log(`Version ${version} already in manifest. Skipping.`);
