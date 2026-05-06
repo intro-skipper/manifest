@@ -62,12 +62,16 @@ _REQUIRED_VERSION_FIELDS = (
 
 
 def _is_system_version(value: str) -> bool:
-    return bool(_VERSION_RE.match(value)) and all(
+    if not _VERSION_RE.match(value):
+        return False
+    return all(
         int(component) <= _MAX_VERSION_COMPONENT for component in value.split(".")
     )
 
 
 def _is_guid(value: str) -> bool:
+    if not isinstance(value, str) or not value:
+        return False
     try:
         uuid.UUID(value)
     except (ValueError, AttributeError, TypeError):
