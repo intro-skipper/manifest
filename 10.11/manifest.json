@@ -160,6 +160,22 @@
                 "sourceUrl": "https://github.com/intro-skipper/jellyfin-plugin-ms-chapter/releases/download/0.5.2.0-4bb370d/ChapterCreator-0.5.2.0.zip",
                 "checksum": "533d67a3704a8ebe99e6278897cf6ac8",
                 "timestamp": "2026-04-20T17:37:46Z"
+            },
+            {
+                "version": "0.5.1.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/jellyfin-plugin-ms-chapter/blob/master/CHANGELOG.md)",
+                "targetAbi": "10.11.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/jellyfin-plugin-ms-chapter/releases/download/0.5.1-2a46182/ChapterCreator-0.5.1.zip",
+                "checksum": "2eea7269b8625ff9f26cf4503103774e",
+                "timestamp": "2026-04-16T02:36:04Z"
+            },
+            {
+                "version": "0.5.0.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/jellyfin-plugin-ms-chapter/blob/master/CHANGELOG.md)",
+                "targetAbi": "10.11.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/jellyfin-plugin-ms-chapter/releases/download/0.5.0-33f16aa/ChapterCreator-0.5.0.zip",
+                "checksum": "ac861165af2a9bdc92109a6d73e34125",
+                "timestamp": "2025-10-21T19:28:18Z"
             }
         ]
     },
