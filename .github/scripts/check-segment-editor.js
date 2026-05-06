@@ -129,7 +129,15 @@ async function main() {
   }
   const release = JSON.parse(releaseRes.body);
   const tag = release.tag_name; // e.g. "v0.1.27.0"
-  const version = tag.startsWith("v") ? tag.slice(1) : tag;
+  let version = tag.startsWith("v") ? tag.slice(1) : tag;
+  // Normalize versions with a hyphenated hash suffix (e.g. "1.0.0-abc1234" → "1.0.0.0")
+  const hyphenIdx = version.indexOf("-");
+  if (hyphenIdx !== -1) {
+    version = version.substring(0, hyphenIdx);
+    if (version.split(".").length < 4) {
+      version += ".0";
+    }
+  }
   const publishedAt = release.published_at;
   console.log(`Latest release: ${tag} (${publishedAt})`);
 
