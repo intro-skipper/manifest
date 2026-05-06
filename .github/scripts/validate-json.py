@@ -34,10 +34,10 @@ from typing import Any
 from urllib.parse import urlparse
 
 
-# ``System.Version`` accepts 2-4 dot-separated non-negative integers and no
-# prerelease/suffix/text. This regex is the Python approximation called for
-# by the validator spec.
+# ``System.Version`` accepts 2-4 dot-separated non-negative Int32 components
+# and no prerelease/suffix/text.
 _VERSION_RE = re.compile(r"^\d+\.\d+(?:\.\d+){0,2}$")
+_MAX_VERSION_COMPONENT = 2_147_483_647
 # 32-character hexadecimal MD5, case-insensitive.
 _CHECKSUM_RE = re.compile(r"^[0-9a-fA-F]{32}$")
 
@@ -62,7 +62,9 @@ _REQUIRED_VERSION_FIELDS = (
 
 
 def _is_system_version(value: str) -> bool:
-    return bool(_VERSION_RE.match(value))
+    return bool(_VERSION_RE.match(value)) and all(
+        int(component) <= _MAX_VERSION_COMPONENT for component in value.split(".")
+    )
 
 
 def _is_guid(value: str) -> bool:
@@ -114,7 +116,7 @@ def _validate_version(
         elif not _is_system_version(v):
             errors.append(
                 f"{base_path}.version: '{v}' is not a valid System.Version "
-                "(expected 2-4 dot-separated non-negative integers)"
+                "(expected 2-4 dot-separated non-negative Int32 components)"
             )
 
     if "targetAbi" in version:
@@ -128,7 +130,7 @@ def _validate_version(
         elif not _is_system_version(ta):
             errors.append(
                 f"{base_path}.targetAbi: '{ta}' is not a valid System.Version "
-                "(expected 2-4 dot-separated non-negative integers)"
+                "(expected 2-4 dot-separated non-negative Int32 components)"
             )
 
     if "sourceUrl" in version:
