@@ -1,0 +1,52 @@
+[
+    {
+        "guid": "c83d86bb-a1e0-4c35-a113-e2101cf4ee6b",
+        "name": "Intro Skipper",
+        "overview": "Automatically detect and skip intros in television episodes",
+        "description": "Analyzes the audio of television episodes and detects introduction sequences.",
+        "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
+        "category": "MoviesAndShows",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/intro-skipper/logo.png",
+        "versions": []
+    },
+    {
+        "guid": "ace21d44-a4e5-4a85-ae75-acd2e24a9574",
+        "name": "Segment Editor",
+        "overview": "Segment editing UI embedded as a plugin page",
+        "description": "Packages the Segment Editor web app (built from intro-skipper/segment-editor) as a Jellyfin server plugin",
+        "owner": "Intro Skipper",
+        "category": "MoviesAndShows",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/segment-editor-plugin@master/images/logo.png",
+        "versions": []
+    },
+    {
+        "guid": "6B0E323A-4AEE-4B10-813F-1E060488AE90",
+        "name": "EDL Creator",
+        "overview": "Create .edl files from Media Segments",
+        "description": "These files can be used by Kodi and other players to skip content like commercials and are stored next to your media. Therefore you need write access.",
+        "owner": "Intro Skipper (forked from Endrl)",
+        "category": "MoviesAndShows",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/jellyfin-plugin-edl/logo.png",
+        "versions": []
+    },
+    {
+        "guid": "e22fb8f5-bc98-4f76-9be4-87de302a97ea",
+        "name": "Chapter Creator",
+        "overview": "Automatically convert Jellyfin media segments into Matroska chapter XML files for enhanced media navigation",
+        "description": "This plugin converts existing media segments (like Intros and Outros) into standardized Matroska chapter XML files",
+        "owner": "Intro Skipper",
+        "category": "MoviesAndShows",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/jellyfin-plugin-ms-chapter/logo.png",
+        "versions": []
+    },
+    {
+        "guid": "b2a63e62-0ac5-4575-9ad2-2c7534ccb83d",
+        "name": "SkipMe.db",
+        "overview": "Retrieves crowd-sourced segment timestamps from the SkipMe.db API",
+        "description": "Retrieves a database of crowd-sourced timestamps from the SkipMe.db API and supplies them to Jellyfin as a segment provider",
+        "owner": "Intro Skipper",
+        "category": "MoviesAndShows",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/skipme.db-plugin@master/images/logo.png",
+        "versions": []
+    }
+]
