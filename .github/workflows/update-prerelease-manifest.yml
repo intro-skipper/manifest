@@ -1,0 +1,69 @@
+name: Update Prerelease Manifest on Dispatch
+
+on:
+  repository_dispatch:
+    types: [update-prerelease-manifest]
+
+# Prerelease dispatches arrive on every commit to a release branch. Serialize
+# the runs and let a newer pending run replace an older pending one, since
+# every run rewrites the complete prerelease entry anyway.
+concurrency:
+  group: update-prerelease-manifest
+  cancel-in-progress: false
+
+jobs:
+  update_prerelease_manifest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Update manifest-prerelease.json using Node.js script
+        run: |
+          node .github/scripts/update-prerelease-manifest.js
+        env:
+          CLIENT_PAYLOAD_JSON: ${{ toJSON(github.event.client_payload) }}
+
+      - name: Validate JSON files
+        run: python .github/scripts/validate-json.py
+
+      - name: Commit and push
+        if: success()
+        env:
+          PLUGIN_NAME: ${{ github.event.client_payload.pluginName }}
+          PLUGIN_VERSION: ${{ github.event.client_payload.version }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add '*manifest-prerelease.json'
+
+          if git diff --staged --quiet; then
+            echo "No changes staged for commit. Working tree clean or no changes to specified file."
+            exit 0
+          fi
+
+          git commit -m "chore: update ${PLUGIN_NAME} prerelease to v${PLUGIN_VERSION}"
+
+          # Dispatches can arrive in quick succession; rebase and retry if
+          # another run pushed between our checkout and push.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push failed (attempt ${attempt}), rebasing onto latest main..."
+            git pull --rebase origin main
+          done
+
+          echo "Failed to push after 3 attempts."
+          exit 1

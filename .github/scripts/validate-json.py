@@ -1,7 +1,8 @@
 """Validate JSON files and Jellyfin plugin manifests.
 
 Every ``*.json`` file under the repository root is parsed for syntax. Files
-named ``manifest.json`` are additionally validated against the shape
+named ``manifest.json`` or ``manifest-prerelease.json`` are additionally
+validated against the shape
 Jellyfin 10.11's ``InstallationManager`` expects when deserialising and
 using ``PackageInfo`` / ``VersionInfo`` (see
 ``Emby.Server.Implementations/Updates/InstallationManager.cs`` on the
@@ -226,7 +227,7 @@ def _validate_manifest(data: Any, errors: list[str]) -> None:
 
 
 def _is_manifest_file(path: pathlib.Path) -> bool:
-    return path.name == "manifest.json"
+    return path.name in ("manifest.json", "manifest-prerelease.json")
 
 
 def main() -> int:

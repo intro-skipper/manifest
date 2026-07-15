@@ -4,6 +4,16 @@
 https://intro-skipper.org/manifest.json
 ```
 
+## Prerelease Manifest URL (Jellyfin 12.0)
+
+Every commit to the intro-skipper `12.0` branch publishes an automated prerelease build to `12.0/manifest-prerelease.json`. Add this URL as an additional repository in Jellyfin to test the latest build:
+
+```
+https://raw.githubusercontent.com/intro-skipper/manifest/main/12.0/manifest-prerelease.json
+```
+
+Prerelease versions follow the scheme `<jellyfin major>.<jellyfin minor>.<release>.<commits since release>` (for example `12.0.1.14`), so a prerelease always sorts above the stable release it is based on and below the next stable release. The catalog only contains the single most recent build, as each build replaces the previous prerelease archive.
+
 # Issues
 
 If you are having issues, check this out:
