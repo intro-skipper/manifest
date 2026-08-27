@@ -1,0 +1,12 @@
+[
+    {
+        "guid": "c83d86bb-a1e0-4c35-a113-e2101cf4ee6b",
+        "name": "Intro Skipper",
+        "overview": "Automatically detect and skip intros in television episodes (prerelease builds)",
+        "description": "Analyzes the audio of television episodes and detects introduction sequences. This catalog contains the automatically published prerelease build of the latest commit and is replaced on every commit.",
+        "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
+        "category": "MoviesAndShows",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/intro-skipper/logo.png",
+        "versions": []
+    }
+]
