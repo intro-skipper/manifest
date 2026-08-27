@@ -26,7 +26,48 @@
         "owner": "Intro Skipper",
         "category": "MoviesAndShows",
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/segment-editor-plugin@master/images/logo.png",
-        "versions": []
+        "versions": [
+            {
+                "version": "12.0.8.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.8.0/segment-editor-plugin-v12.0.8.0.zip",
+                "checksum": "3134966f8aa52638d4f33cea6a00f82d",
+                "timestamp": "2026-08-22T04:50:14Z"
+            },
+            {
+                "version": "12.0.7.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.7.0/segment-editor-plugin-v12.0.7.0.zip",
+                "checksum": "e4237b7176e1ffeb16b8de3f3a8eb20e",
+                "timestamp": "2026-08-20T04:54:01Z"
+            },
+            {
+                "version": "12.0.6.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.6.0/segment-editor-plugin-v12.0.6.0.zip",
+                "checksum": "aedca2b30c68a9bd29b96048db6761eb",
+                "timestamp": "2026-08-18T04:53:03Z"
+            },
+            {
+                "version": "12.0.5.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.5.0/segment-editor-plugin-v12.0.5.0.zip",
+                "checksum": "dac22bb13923f15b61b3669da3758d8a",
+                "timestamp": "2026-08-09T05:18:54Z"
+            },
+            {
+                "version": "12.0.4.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.4.0/segment-editor-plugin-v12.0.4.0.zip",
+                "checksum": "b7e4f34eadf5dbfd53508041c15f42fc",
+                "timestamp": "2026-08-08T19:34:10Z"
+            }
+        ]
     },
     {
         "guid": "6B0E323A-4AEE-4B10-813F-1E060488AE90",
