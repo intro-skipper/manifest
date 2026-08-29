@@ -7,6 +7,15 @@
         "owner": "AbandonedCart, rlauuzo, jumoog (forked from ConfusedPolarBear)",
         "category": "MoviesAndShows",
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/intro-skipper/logo.png",
-        "versions": []
+        "versions": [
+            {
+                "version": "12.0.1.57",
+                "changelog": "- Prerelease build of commit [`f2a5f47`](https://github.com/intro-skipper/intro-skipper/commit/f2a5f47e3661e608b1afb944872d1c06818c28bf)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/intro-skipper/releases/download/12.0/prerelease/intro-skipper-v12.0.1.57.zip",
+                "checksum": "8fcc0bb0adfef8eab2378fae45282198",
+                "timestamp": "2026-08-29T11:30:21Z"
+            }
+        ]
     }
 ]
