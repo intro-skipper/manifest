@@ -7,6 +7,7 @@
 // rolling prerelease GitHub release is replaced on every commit.
 const fs = require("fs");
 const path = require("path");
+const { getCatalogDirectory, writeCatalog } = require("./catalog-paths");
 
 const clientPayloadJson = process.env.CLIENT_PAYLOAD_JSON;
 
@@ -51,7 +52,7 @@ if (!newVersionEntry.version || typeof newVersionEntry.version !== "string") {
 // --- Determine catalog directory from the targetAbi (same as update-manifest.js) ---
 const catalogVersionSource = newVersionEntry.targetAbi;
 
-let catalogDirName = newVersionEntry.version.split(".").slice(0, 2).join(".");
+let catalogDirName = getCatalogDirectory(newVersionEntry.version);
 
 if (typeof catalogVersionSource === "string") {
   try {
@@ -59,8 +60,8 @@ if (typeof catalogVersionSource === "string") {
     if (parts.length >= 2) {
       const extractedPrefix = parts.slice(0, 2).join(".");
       if (/^\d+\.\d+$/.test(extractedPrefix)) {
-        catalogDirName = extractedPrefix;
-        console.log(`Using extracted prefix "${extractedPrefix}" from new version's targetAbi ("${catalogVersionSource}") for catalog directory.`);
+        catalogDirName = getCatalogDirectory(extractedPrefix);
+        console.log(`Using catalog directory "${catalogDirName}" from new version's targetAbi ("${catalogVersionSource}").`);
       } else {
         console.warn(`Could not extract a valid 'major.minor' prefix from new version's targetAbi "${catalogVersionSource}". Using default "${catalogDirName}".`);
       }
@@ -116,7 +117,7 @@ try {
   catalogData[pluginIndex].versions = [newVersionEntry];
   console.log(`Set version ${newVersionEntry.version} as the only prerelease entry for plugin "${pluginNameToUpdate}".`);
 
-  fs.writeFileSync(catalogFilePath, JSON.stringify(catalogData, null, 4) + "\n");
+  writeCatalog(catalogDirName, "manifest-prerelease.json", JSON.stringify(catalogData, null, 4) + "\n");
 
   console.log(`Successfully updated catalog file: ${catalogFilePath}`);
   const updatedPluginForLog = catalogData.find(p => p.name === pluginNameToUpdate);
