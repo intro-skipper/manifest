@@ -11,5 +11,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Test catalog writers and compatibility copies
+        run: node --test .github/scripts/tests/*.test.js
+
       - name: Validate JSON files
         run: python .github/scripts/validate-json.py

@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const crypto = require("crypto");
+const { getCatalogDirectory, writeCatalog } = require("./catalog-paths");
 
 const REPO = "intro-skipper/segment-editor-plugin";
 const PLUGIN_GUID = "ace21d44-a4e5-4a85-ae75-acd2e24a9574";
@@ -158,8 +159,7 @@ async function main() {
   console.log(`targetAbi: ${targetAbi}`);
 
   // 3. Determine catalog directory (e.g. "10.11")
-  const abiParts = targetAbi.split(".");
-  const catalogDir = abiParts.slice(0, 2).join(".");
+  const catalogDir = getCatalogDirectory(targetAbi);
   const manifestPath = path.join(catalogDir, "manifest.json");
 
   if (!fs.existsSync(manifestPath)) {
@@ -240,7 +240,7 @@ async function main() {
   }
 
   // 8. Write updated manifest
-  fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 4) + "\n");
+  writeCatalog(catalogDir, "manifest.json", JSON.stringify(manifest, null, 4) + "\n");
   console.log(`Updated ${manifestPath} with version ${version}.`);
   console.log(`Kept ${plugin.versions.length} version(s) (max ${MAX_VERSIONS}).`);
 

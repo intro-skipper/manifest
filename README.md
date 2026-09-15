@@ -4,15 +4,25 @@
 https://intro-skipper.org/manifest.json
 ```
 
-## Prerelease Manifest URL (Jellyfin 12.0)
+## Stable Manifest URL (Jellyfin 12.x)
 
-Every commit to the intro-skipper `12.0` branch publishes an automated prerelease build to `12.0/manifest-prerelease.json`. Add this URL as an additional repository in Jellyfin to test the latest build:
+The canonical stable catalog for all Jellyfin 12.x versions is:
 
 ```
-https://raw.githubusercontent.com/intro-skipper/manifest/main/12.0/manifest-prerelease.json
+https://raw.githubusercontent.com/intro-skipper/manifest/main/12/manifest.json
+```
+
+## Prerelease Manifest URL (Jellyfin 12.x)
+
+Every commit to the intro-skipper `12.0` branch publishes an automated prerelease build to `12/manifest-prerelease.json`. Add this URL as an additional repository in Jellyfin to test the latest build:
+
+```
+https://raw.githubusercontent.com/intro-skipper/manifest/main/12/manifest-prerelease.json
 ```
 
 Prerelease versions follow the scheme `<jellyfin major>.<jellyfin minor>.<release>.<commits since release>` (for example `12.0.1.14`), so a prerelease always sorts above the stable release it is based on and below the next stable release. The catalog only contains the single most recent build, as each build replaces the previous prerelease archive.
+
+Both `12.0/manifest.json` and `12.0/manifest-prerelease.json` remain available as byte-identical, synchronized compatibility copies of the catalogs under `12/`. They are regular JSON files, not symlinks, so existing raw GitHub and jsDelivr URLs continue to work. The `12.0` source branch, plugin versions, and `targetAbi` values are unchanged; Jellyfin still checks each entry's `targetAbi` for compatibility. Jellyfin 10.x catalogs retain their existing major.minor directories, such as `10.11/`.
 
 # Issues
 

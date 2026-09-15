@@ -1,6 +1,7 @@
 // .github/scripts/update-manifest.js
 const fs = require("fs");
 const path = require("path");
+const { getCatalogDirectory, writeCatalog } = require("./catalog-paths");
 
 const clientPayloadJson = process.env.CLIENT_PAYLOAD_JSON;
 
@@ -45,7 +46,7 @@ if (!newVersionEntry.version || typeof newVersionEntry.version !== "string") {
 // --- Determine catalog directory and version for commit message ---
 const catalogVersionSource = newVersionEntry.targetAbi;
 
-let catalogDirName = newVersionEntry.version.split(".").slice(0, 2).join(".");
+let catalogDirName = getCatalogDirectory(newVersionEntry.version);
 
 if (typeof catalogVersionSource === "string") {
   try {
@@ -53,8 +54,8 @@ if (typeof catalogVersionSource === "string") {
     if (parts.length >= 2) {
       const extractedPrefix = parts.slice(0, 2).join(".");
       if (/^\d+\.\d+$/.test(extractedPrefix)) {
-        catalogDirName = extractedPrefix;
-        console.log(`Using extracted prefix "${extractedPrefix}" from new version's targetAbi ("${catalogVersionSource}") for catalog directory.`);
+        catalogDirName = getCatalogDirectory(extractedPrefix);
+        console.log(`Using catalog directory "${catalogDirName}" from new version's targetAbi ("${catalogVersionSource}").`);
       } else {
         console.warn(`Could not extract a valid 'major.minor' prefix from new version's targetAbi "${catalogVersionSource}". Using default "${catalogDirName}".`);
       }
@@ -126,7 +127,7 @@ try {
     process.exit(1); // Fail the script
   }
 
-  fs.writeFileSync(catalogFilePath, JSON.stringify(catalogData, null, 4));
+  writeCatalog(catalogDirName, "manifest.json", JSON.stringify(catalogData, null, 4));
 
   console.log(`Successfully updated catalog file: ${catalogFilePath}`);
   const updatedPluginForLog = catalogData.find(p => p.name === pluginNameToUpdate);

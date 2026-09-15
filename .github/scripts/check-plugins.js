@@ -8,6 +8,7 @@ const fs = require("fs");
 const path = require("path");
 const https = require("https");
 const crypto = require("crypto");
+const { getCatalogDirectory, writeCatalog } = require("./catalog-paths");
 
 const MAX_VERSIONS = 5;
 const MAX_RELEASES_TO_CHECK = 10;
@@ -272,7 +273,7 @@ async function processPlugin(plugin, manifestCache, modifiedManifests) {
       );
       continue;
     }
-    const catalogDir = abiParts.slice(0, 2).join(".");
+    const catalogDir = getCatalogDirectory(targetAbi);
 
     // Load manifest if not already cached
     if (!manifestCache[catalogDir]) {
@@ -382,7 +383,8 @@ async function main() {
     .readdirSync(".")
     .filter(
       (d) =>
-        /^\d+\.\d+$/.test(d) &&
+        (d === "12" || /^\d+\.\d+$/.test(d)) &&
+        getCatalogDirectory(d) === d &&
         fs.statSync(d).isDirectory() &&
         fs.existsSync(path.join(d, "manifest.json")),
     );
@@ -418,7 +420,7 @@ async function main() {
   for (const catalogDir of modifiedManifests) {
     const manifestPath = path.join(catalogDir, "manifest.json");
     const manifest = manifestCache[catalogDir];
-    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 4) + "\n");
+    writeCatalog(catalogDir, "manifest.json", JSON.stringify(manifest, null, 4) + "\n");
     console.log(`Wrote updated manifest: ${manifestPath}`);
   }
 
