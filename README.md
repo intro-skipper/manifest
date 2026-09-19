@@ -4,20 +4,12 @@
 https://intro-skipper.org/manifest.json
 ```
 
-## Stable Manifest URL (Jellyfin 12.x)
-
-The canonical stable catalog for all Jellyfin 12.x versions is:
-
-```
-https://raw.githubusercontent.com/intro-skipper/manifest/main/12/manifest.json
-```
-
 ## Prerelease Manifest URL (Jellyfin 12.x)
 
 Every commit to the intro-skipper `12.0` branch publishes an automated prerelease build to `12/manifest-prerelease.json`. Add this URL as an additional repository in Jellyfin to test the latest build:
 
 ```
-https://raw.githubusercontent.com/intro-skipper/manifest/main/12/manifest-prerelease.json
+https://intro-skipper.org/manifest-prerelease.json
 ```
 
 Prerelease versions follow the scheme `<jellyfin major>.<jellyfin minor>.<release>.<commits since release>` (for example `12.0.1.14`), so a prerelease always sorts above the stable release it is based on and below the next stable release. The catalog only contains the single most recent build, as each build replaces the previous prerelease archive.
@@ -29,7 +21,7 @@ Both `12.0/manifest.json` and `12.0/manifest-prerelease.json` remain available a
 If you are having issues, check this out:
 
 ```bash
-curl -A "Jellyfin-Server/10.11.1" https://intro-skipper.org/manifest.json -L -v
+curl -A "Jellyfin-Server/12.1.9" https://intro-skipper.org/manifest.json -L -v
 ```
 
 This should resolve to:
