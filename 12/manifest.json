@@ -132,6 +132,30 @@
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/skipme.db-plugin@master/images/logo.png",
         "versions": [
             {
+                "version": "0.2.4.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download/v0.2.4.0/SkipMe.db-plugin-v0.2.4.0.zip",
+                "checksum": "48e6863229505013d42495e124db4701",
+                "timestamp": "2026-09-19T09:42:01Z"
+            },
+            {
+                "version": "0.2.3.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download/v0.2.3.0/SkipMe.db-plugin-v0.2.3.0.zip",
+                "checksum": "b84f68dab00d50c1e2217e9ee25bbe68",
+                "timestamp": "2026-09-19T02:16:33Z"
+            },
+            {
+                "version": "0.2.2.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
+                "targetAbi": "12.0.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download/v0.2.2.0/SkipMe.db-plugin-v0.2.2.0.zip",
+                "checksum": "8254d6546096fcff616db62a38c4ce88",
+                "timestamp": "2026-09-19T01:00:09Z"
+            },
+            {
                 "version": "0.2.1.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
                 "targetAbi": "12.0.0.0",
@@ -146,30 +170,6 @@
                 "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download/v0.1.27.0/SkipMe.db-plugin-v0.1.27.0.zip",
                 "checksum": "92ab914719613e34866de0ac20676388",
                 "timestamp": "2026-09-18T03:25:59Z"
-            },
-            {
-                "version": "0.1.26.0",
-                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
-                "targetAbi": "12.0.0.0",
-                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download/v0.1.26.0/SkipMe.db-plugin-v0.1.26.0.zip",
-                "checksum": "ae7f986b1153628fef8a46128a3e793a",
-                "timestamp": "2026-09-17T05:28:44Z"
-            },
-            {
-                "version": "0.1.25.0",
-                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
-                "targetAbi": "12.0.0.0",
-                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download/v0.1.25.0/SkipMe.db-plugin-v0.1.25.0.zip",
-                "checksum": "67d20f68322bd524b6d812c54ed0338d",
-                "timestamp": "2026-09-13T12:29:22Z"
-            },
-            {
-                "version": "0.1.24.0",
-                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md)",
-                "targetAbi": "12.0.0.0",
-                "sourceUrl": "https://github.com/intro-skipper/skipme.db-plugin/releases/download/v0.1.24.0/SkipMe.db-plugin-v0.1.24.0.zip",
-                "checksum": "f0656e024a4fa9c3409c2c40644832ff",
-                "timestamp": "2026-09-13T03:54:21Z"
             }
         ]
     }
