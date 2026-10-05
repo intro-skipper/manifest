@@ -100,6 +100,14 @@
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/segment-editor-plugin@master/images/logo.png",
         "versions": [
             {
+                "version": "1.0.71.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "10.11.5.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v1.0.71.0/segment-editor-plugin-v1.0.71.0.zip",
+                "checksum": "0289f3b7c30c9fb8c01eeb26a9d48412",
+                "timestamp": "2026-10-05T00:11:41Z"
+            },
+            {
                 "version": "1.0.70.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
                 "targetAbi": "10.11.5.0",
@@ -130,14 +138,6 @@
                 "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v1.0.67.0/segment-editor-plugin-v1.0.67.0.zip",
                 "checksum": "4c3a0596a5d3dbfac8931bde96b6fbc4",
                 "timestamp": "2026-09-24T14:47:19Z"
-            },
-            {
-                "version": "1.0.66.0",
-                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
-                "targetAbi": "10.11.5.0",
-                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v1.0.66.0/segment-editor-plugin-v1.0.66.0.zip",
-                "checksum": "f16b06fcb7cc1910a748c8f292bfc374",
-                "timestamp": "2026-09-24T09:19:12Z"
             }
         ]
     },
