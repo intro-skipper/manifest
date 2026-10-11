@@ -9,12 +9,12 @@
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/intro-skipper/logo.png",
         "versions": [
             {
-                "version": "12.0.5.10",
-                "changelog": "- Prerelease build of commit [`2189fe1`](https://github.com/intro-skipper/intro-skipper/commit/2189fe1d2be3f07987ca48ecdea58658348cb6c5)",
+                "version": "12.0.5.11",
+                "changelog": "- Prerelease build of commit [`a83b385`](https://github.com/intro-skipper/intro-skipper/commit/a83b385fcfe8d868efe297a19759a57708388435)",
                 "targetAbi": "12.0.0.0",
-                "sourceUrl": "https://github.com/intro-skipper/intro-skipper/releases/download/12.0/prerelease/intro-skipper-v12.0.5.10.zip",
-                "checksum": "26a17c57f3579c86d657aa71b1f1b317",
-                "timestamp": "2026-10-11T15:02:16Z"
+                "sourceUrl": "https://github.com/intro-skipper/intro-skipper/releases/download/12.0/prerelease/intro-skipper-v12.0.5.11.zip",
+                "checksum": "1d5c6e16f393e020750822b76036bd88",
+                "timestamp": "2026-10-11T18:27:49Z"
             }
         ]
     }
