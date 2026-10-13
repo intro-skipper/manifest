@@ -246,7 +246,7 @@ for (const script of ["check-plugins.js", "check-segment-editor.js"]) {
           release,
           { ...release, tag_name: "v0.6.3.0" },
         ]);
-        for (const repo of ["jellyfin-plugin-ms-chapter", "skipme.db-plugin"]) {
+        for (const repo of ["jellyfin-plugin-ms-chapter", "skipme.db-plugin", "jellyfin-plugin-runtime-trim"]) {
           responses[`https://api.github.com/repos/intro-skipper/${repo}/releases?per_page=10`] = "[]";
         }
       } else {

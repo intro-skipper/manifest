@@ -33,6 +33,12 @@ const PLUGINS = [
     changelogUrl:
       "https://github.com/intro-skipper/skipme.db-plugin/blob/main/CHANGELOG.md",
   },
+  {
+    repo: "intro-skipper/jellyfin-plugin-runtime-trim",
+    guid: "997a526b-ac90-4198-8353-450a9f74f4d5",
+    changelogUrl:
+      "https://github.com/intro-skipper/jellyfin-plugin-runtime-trim/releases",
+  },
 ];
 
 // ── helpers ──────────────────────────────────────────────────────────
