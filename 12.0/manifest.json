@@ -188,5 +188,15 @@
                 "timestamp": "2026-09-18T11:30:04Z"
             }
         ]
+    },
+    {
+        "guid": "997a526b-ac90-4198-8353-450a9f74f4d5",
+        "name": "Runtime Trim",
+        "overview": "Ends playback when the video ends, even if an audio track runs longer",
+        "description": "Some releases mux an audio track that runs past the end of the video, so playback continues on a frozen frame until the longest track ends. Runtime Trim sets the runtime to where the video stream ends.",
+        "owner": "Intro Skipper",
+        "category": "General",
+        "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/jellyfin-plugin-runtime-trim@main/images/logo.png",
+        "versions": []
     }
 ]
