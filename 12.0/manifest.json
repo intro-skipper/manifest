@@ -197,6 +197,15 @@
         "owner": "Intro Skipper",
         "category": "General",
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/jellyfin-plugin-runtime-trim@main/images/logo.png",
-        "versions": []
+        "versions": [
+            {
+                "version": "0.1.0.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/jellyfin-plugin-runtime-trim/releases)",
+                "targetAbi": "12.1.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/jellyfin-plugin-runtime-trim/releases/download/v0.1.0.0/runtime-trim-v0.1.0.0.zip",
+                "checksum": "a35bf2760cc3ad8197400e32b77b0cb0",
+                "timestamp": "2026-10-13T13:59:36Z"
+            }
+        ]
     }
 ]
