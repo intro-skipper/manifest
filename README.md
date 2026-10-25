@@ -29,4 +29,9 @@ This should resolve to:
 * IPv6: `2a03:b0c0:3:f0::cd5f:a000` or `2a03:b0c0:2:f0::841b:d001` or `2a01:4f8:c014:ffe9::1`
 * IPv4: `161.35.245.42` or `165.227.244.161` or `178.105.98.131`
 
+Soon:
+
+* IPv6: `2602:f41f:10:1040:956d:795e:a878:3768` or `2602:f41f:10:1040:1a4a:e479:3a9:24ed` or `2a01:4f8:c014:ffe9::1`
+* IPv4: `144.225.80.97` or `144.225.80.157` or `178.105.98.131`
+
 From there, you are redirected to jsDelivr.
