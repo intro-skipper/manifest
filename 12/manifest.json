@@ -68,6 +68,14 @@
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/segment-editor-plugin@master/images/logo.png",
         "versions": [
             {
+                "version": "12.0.21.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
+                "targetAbi": "12.4.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.21.0/segment-editor-plugin-v12.0.21.0.zip",
+                "checksum": "5c7bb8b350cf70ad2252bea7dee792b1",
+                "timestamp": "2026-10-28T12:53:22Z"
+            },
+            {
                 "version": "12.0.20.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
                 "targetAbi": "12.4.0.0",
@@ -98,14 +106,6 @@
                 "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.17.0/segment-editor-plugin-v12.0.17.0.zip",
                 "checksum": "334e56c3f51677e91ce848b87ea07f8f",
                 "timestamp": "2026-10-09T11:20:32Z"
-            },
-            {
-                "version": "12.0.16.0",
-                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/segment-editor-plugin/blob/master/CHANGELOG.md)",
-                "targetAbi": "12.1.0.0",
-                "sourceUrl": "https://github.com/intro-skipper/segment-editor-plugin/releases/download/v12.0.16.0/segment-editor-plugin-v12.0.16.0.zip",
-                "checksum": "bd923e08abcc1b55ec724c43b233c392",
-                "timestamp": "2026-10-05T00:12:15Z"
             }
         ]
     },
@@ -222,6 +222,14 @@
         "category": "General",
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/jellyfin-plugin-runtime-trim@main/images/logo.png",
         "versions": [
+            {
+                "version": "0.1.1.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/jellyfin-plugin-runtime-trim/releases)",
+                "targetAbi": "12.1.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/jellyfin-plugin-runtime-trim/releases/download/v0.1.1.0/runtime-trim-v0.1.1.0.zip",
+                "checksum": "b8e6d7a4c9899039c4ea45d227fbddc5",
+                "timestamp": "2026-10-28T16:27:34Z"
+            },
             {
                 "version": "0.1.0.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/jellyfin-plugin-runtime-trim/releases)",
