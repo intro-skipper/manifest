@@ -9,6 +9,14 @@
         "imageUrl": "https://cdn.jsdelivr.net/gh/intro-skipper/manifest@a434e00edba70493794e25917cc8d3326d5a85c6/images/intro-skipper/logo.png",
         "versions": [
             {
+                "version": "12.0.7.0",
+                "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/intro-skipper/releases/tag/12.0/v12.0.7.0)\n",
+                "targetAbi": "12.4.0.0",
+                "sourceUrl": "https://github.com/intro-skipper/intro-skipper/releases/download/12.0/v12.0.7.0/intro-skipper-v12.0.7.0.zip",
+                "checksum": "1ac84ff1422f2948658bfe545f1aec1b",
+                "timestamp": "2026-11-21T11:00:50Z"
+            },
+            {
                 "version": "12.0.6.0",
                 "changelog": "- See the full changelog at [GitHub](https://github.com/intro-skipper/intro-skipper/releases/tag/12.0/v12.0.6.0)\n",
                 "targetAbi": "12.2.0.0",
